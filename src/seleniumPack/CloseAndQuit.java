@@ -14,6 +14,9 @@ public class CloseAndQuit {
     driver.findElement(By.xpath("html/body/div[1]/div/div/div/div[2]/div[1]/a/button")).click();
     //--Browser Commands--
     driver.close(); // close current window at a time.close one windows which opened currently.
-  //driver.quit();  // close all the window at a time.close all those windows which opened currently.
+                       //However webdriver session remain active.
+    
+    //driver.quit();  // close all the window at a time.close all those windows which opened currently.
+                    //However webdriver session ends with all browser windows.
 	} 
 }

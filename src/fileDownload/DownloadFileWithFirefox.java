@@ -1,5 +1,6 @@
 package fileDownload;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -25,6 +26,9 @@ public class DownloadFileWithFirefox {
 		WebDriver driver = new FirefoxDriver(option);
 		driver.get("https://demo.automationtesting.in/FileDownload.html");
 		
+		driver.findElement(By.id("textbox")).sendKeys("Automation firefox");
+		driver.findElement(By.id("createTxt")).click();
+		driver.findElement(By.id("link-to-download")).click();
 	}
 
 }

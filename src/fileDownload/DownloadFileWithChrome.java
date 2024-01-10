@@ -8,8 +8,8 @@ public class DownloadFileWithChrome {
 	public static void main(String[] args) {
 				System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver.exe");
 			    WebDriver driver = new ChromeDriver();
-			    driver.manage().window().maximize();
 			    driver.get("https://demo.automationtesting.in/FileDownload.html");
+			    driver.manage().window().maximize();
 			    //Generate the text files
 			    driver.findElement(By.xpath("//*[@id=\"textbox\"]")).sendKeys("Automation");
 			    driver.findElement(By.xpath("//*[@id=\"createTxt\"]")).click();

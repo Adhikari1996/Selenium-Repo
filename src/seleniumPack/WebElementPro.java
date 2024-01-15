@@ -13,7 +13,6 @@ public class WebElementPro {
 	    driver.get("https://demo.automationtesting.in/Register.html");
 	    //maximize page
 	    driver.manage().window().maximize();
-	    
 	    //Name
 	    driver.findElement(By.xpath("/html/body/section/div/div/div[2]/form/div[1]/div[1]/input")).sendKeys("Raj");
 	    //Last Name
@@ -28,7 +27,6 @@ public class WebElementPro {
 	    boolean male = driver.findElement(By.xpath("html/body/section/div/div/div[2]/form/div[5]/div/label[1]/input")).isSelected();
 	    //boolean female = driver.findElement(By.xpath("html/body/section/div/div/div[2]/form/div[5]/div/label[2]/input")).isSelected();
 	    //System.out.println(male);
-
 	    if(!male) 
 	    	driver.findElement(By.xpath("html/body/section/div/div/div[2]/form/div[5]/div/label[1]/input")).click();	
 	    else 
@@ -54,9 +52,7 @@ public class WebElementPro {
         	 //driver.navigate().back();
          }else {
         	 System.out.println("Linked not displyed"); 
-         }
-         
+         } 
 	}
-
 }
  

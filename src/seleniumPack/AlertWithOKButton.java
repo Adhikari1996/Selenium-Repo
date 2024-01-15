@@ -12,7 +12,7 @@ public class AlertWithOKButton {
 	    driver.get("https://demo.automationtesting.in/Alerts.html");
 	    driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div[1]/ul/li[1]/a")).click();
 	    driver.findElement(By.xpath("html/body/div[1]/div/div/div/div[2]/div[1]/button")).click();
-	    //Alert box wit Ok button exmaple
+	    //Alert box with Ok button exmaple
 	    //Switch to alert box
 	    //If ok button then used to accept method
 	    String alertText = driver.switchTo().alert().getText();

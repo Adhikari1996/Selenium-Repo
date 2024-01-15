@@ -40,6 +40,7 @@ public static void main(String[] args) {
 	// -- Wait Commands --	
 		//Implicit Wait
 		//Explicit Wait
+		//Fluent Wait
 	}
 
 }

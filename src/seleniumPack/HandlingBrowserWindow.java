@@ -16,7 +16,7 @@ public class HandlingBrowserWindow {
 	    driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div[2]/div[1]/a/button")).click();
 	    
 	    Set <String> noOfID = driver.getWindowHandles();
-	    //System.out.println(noOfID);
+	    System.out.println(noOfID);
 	    
 	    for(String ID : noOfID) {
 	    	String windowsURL = driver.switchTo().window(ID).getTitle();
@@ -32,5 +32,5 @@ public class HandlingBrowserWindow {
 //	    SwitchTo().alert();
 //	    SwitchTo().defaultContent();
 //	    switchTo().window();
-//	    Driver.getWindowHanldes();
+//	    driver.getWindowHanldes();
 }

@@ -18,7 +18,7 @@ public class BrokenLink {
 	    WebDriver driver = new ChromeDriver();
 	    //Maximize Page
 	    driver.manage().window().maximize();
-	    //Implicit wait for 10 secs
+	    //Implicit wait for 10 secs for browser
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    //Open the URL
 	    driver.get("https://www.google.co.in/");
@@ -39,7 +39,7 @@ public class BrokenLink {
 	    	httpConnection.connect();
 	    	int response=httpConnection.getResponseCode();
 	    	String textRes = (response >= 400)? "Broken Link: " + href :  "Valid Link: " + href  ;
-	    	 System.out.println(textRes); 
+	    	System.out.println(textRes); 
 	    }
 	    System.out.println();
 	    System.out.println("All Links Checked"); 

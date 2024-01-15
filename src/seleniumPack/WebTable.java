@@ -26,5 +26,4 @@ public class WebTable {
          }
          driver.close();
 	}
-
 }

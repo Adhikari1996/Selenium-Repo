@@ -39,7 +39,6 @@ public class FileDownloadUseFluentWait {
 					//.pollingEvery(Duration.ofMillis(10))
 					//Change duration of timeout to second and polling time to mills as well.
 					//If get exceptions then used try ,catch.
-		
 		try {
 			boolean downloaded=wait.until(f -> f.exists() && f.canRead());
 			if(downloaded)

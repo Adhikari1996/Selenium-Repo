@@ -1,6 +1,5 @@
 package seleniumPack;
 
-import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
@@ -27,7 +26,7 @@ public class WebdriverConditional {
 		}
 	}
 	
-	public static void openBrowser(WebDriver driver,String browserType) throws Exception {
+    public static void openBrowser(WebDriver driver,String browserType) throws Exception {
 		switch(browserType) {
 		case "Chrome":
 			System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver.exe");
@@ -42,7 +41,7 @@ public class WebdriverConditional {
 			driver = new EdgeDriver();
 		break;
 		case "Safari":
-			System.setProperty("webdriver.safari.driver","C:\\safaridriver.exe");
+			//System.setProperty("webdriver.safari.driver","C:\\safaridriver.exe");
 			driver = new SafariDriver();
 		break;
 		case "InternetExplorer":
@@ -58,11 +57,13 @@ public class WebdriverConditional {
 	}
 		URL(driver);
 }
+	
     public static void URL(WebDriver driver) {
     	//Open URL
 		driver.get("https://www.facebook.com/reg/");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(8, TimeUnit.SECONDS);
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
 		//WebElements
 		WebElement firstName=driver.findElement(By.name("firstname"));
@@ -77,13 +78,13 @@ public class WebdriverConditional {
 		sendKeys(driver,10,"123456",password);
 		radioButton(driver,gender);
     }
-    
+
     public static void sendKeys(WebDriver driver,int timeout,String value,WebElement element) {
     	new WebDriverWait(driver,timeout)
     	.until(ExpectedConditions.visibilityOf(element));
     	 element.sendKeys(value);
     }
-    
+   
     public static void radioButton(WebDriver driver,List<WebElement> gender) {
     	for(int i=0;i<gender.size();i++) {
     		WebElement mulGender=gender.get(i);

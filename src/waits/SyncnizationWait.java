@@ -71,4 +71,4 @@ public class SyncnizationWait {
 //.pollingEvery(Duration.ofMillis(2))
 //.ignoring(Exception.Class)
 //.withMessage("your message");
-//fluent.util(ExpectedCondtions.presenceOfElementIsLocated(By.xpath("//*[@id=\"textbox\"]"))).click();
+//fluent.until(ExpectedCondtions.presenceOfElementIsLocated(By.xpath("//*[@id=\"textbox\"]"))).click();
